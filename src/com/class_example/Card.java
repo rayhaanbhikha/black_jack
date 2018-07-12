@@ -3,23 +3,11 @@ package com.class_example;
 public class Card {
     private String name;
     private int value;
-    public Card(String name) {
-        this.name = name.toLowerCase();
-        setValue();
-    }
-
-    private void setValue() {
-        switch(this.name) {
-            case "king": case "jack": case "queen":
-                this.value = 10;
-                break;
-            case "Ace":
-                this.value = 11;
-                break;
-            default:
-                this.value = Integer.parseInt(this.name);
-                break;
-        }
+    private String suitType;
+    public Card(String suitType, String name, int value) {
+        this.name = name;
+        this.value = value;
+        this.suitType = suitType;
     }
 
     public String getName() {
@@ -28,5 +16,9 @@ public class Card {
 
     public int getValue() {
         return value;
+    }
+
+    public String getSuitType() {
+        return suitType;
     }
 }
