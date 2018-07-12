@@ -1,12 +1,8 @@
 package com.class_example;
 
 public class Deck {
-    private Suits hearts = Suits.Hearts;
-    private Suits spades = Suits.Spades;
-    private Suits clubs = Suits.Clubs;
-    private Suits diamonds = Suits.Diamonds;
-
     private Card[] cardList = new Card[52];
+    private static int topCard = 0;
 
     private Deck() {
         int i = 0;
@@ -28,4 +24,11 @@ public class Deck {
         return theDeck;
     }
 
+    public static void incTopCard() {
+        topCard++;
+    }
+
+    public static int getTopCard() {
+        return topCard;
+    }
 }

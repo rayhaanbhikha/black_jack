@@ -4,11 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Card[] deck = Deck.getTheDeck().getCardList();
+        Game game = new Game();
 
-        for(Card card: deck){
-            System.out.println(card.getName() + " of " + card.getSuitType() + " (" + card.getValue() + ")");
-        }
 
     }
 }
